@@ -1,0 +1,181 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+img {
+    max-width: 100%;
+    user-select: none;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+input,button:focus {
+    outline: none!important
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    
+}
+.header-container {
+    background-color: #c6c6c6;
+}
+.nav-bar {
+    display: block;
+}
+.burger {
+    display: none;
+}
+.header__body {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.logo {
+    text-transform: uppercase;
+    font-size: 20px;
+    color: azure;
+    font-weight: 600;
+}
+.logo:hover {
+    text-decoration: none;
+}
+.nav-bar {
+    font-size: 20px;
+    font-weight: 600;
+}
+.menu {
+    display: flex;
+}
+.menu__link {
+    color: black;
+    margin: 0px 0px 0px 20px;
+    text-transform: uppercase;
+}
+.menu__link:hover {
+    color: white;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+.lock {
+    overflow: hidden;
+}
+@media (max-width: 700px) {
+    .menu__link {
+        margin-left: 10px;
+        margin-bottom: 10px;
+    }
+    .nav-bar {
+        background-color: #c6c6c6;
+        position: absolute;
+        width: 100%;
+        top: 50px;
+        left: 0;
+        display: none;
+        overflow-y: auto;
+/*        height: 300px;*/
+    }
+    .burger.active:before {
+        display: none;
+    }
+    .burger.active span{
+        transform: rotate(45deg);
+    }
+    .burger.active:after {
+        transform: rotate(-45deg);
+        bottom: 10px;
+    }
+    .active {
+        display: block;
+    }
+    .menu {
+        display: block;
+    }
+    .burger {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 25px;
+    }
+    .burger:before,
+    .burger:after {
+        content: "";
+        background-color: white;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        right: 15px;
+        transition: all 0.5s ease;
+    }
+    .burger:before {
+        top: 0;
+    }
+    .burger:after {
+        bottom: 0;
+    }
+    .burger span {
+        position: absolute;
+        background-color: white;
+        right: 15px;
+        width: 100%;
+        height: 2px;
+        top: 12px;
+        transition: all 0.5s ease;
+    }
+}

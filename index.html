@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Burger menu</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+</head>
+<body class="body">
+    <div class="header-container">
+        <div class="container">
+            <div class="header__body row">
+                
+                    <a href="#" class="logo">
+                        <span class="header__title">Logo</span>
+                    </a>
+                
+                    <div class="burger" id="click">
+                        <span></span>
+                    </div>
+                    <nav class="nav-bar" id="nav">
+                        <ul class="menu">
+                            <li><a href="#" class="menu__link">Home</a></li>
+                            <li><a href="#" class="menu__link">News</a></li>
+                            <li><a href="#" class="menu__link">About</a></li>
+                            <li><a href="#" class="menu__link">Contact</a></li>
+                            <li><a href="#" class="menu__link">Home</a></li>
+                            <li><a href="#" class="menu__link">News</a></li>
+                            <li><a href="#" class="menu__link">About</a></li>
+                            <li><a href="#" class="menu__link">Home</a></li>
+                            <li><a href="#" class="menu__link">News</a></li>
+                            <li><a href="#" class="menu__link">About</a></li>
+                            <li><a href="#" class="menu__link">Contact</a></li>
+                            
+                        </ul>
+                    </nav>
+            </div>
+            
+        </div>
+        
+    </div>
+    <main class="main">
+    <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam eum quae cumque totam est veritatis consequuntur fugiat amet, excepturi illum, tempore iusto vel a provident odit! Adipisci iste eligendi delectus?</span>
+    <span>Amet repellendus aliquam eligendi dolorum laborum, cumque dolor labore voluptatum iste, sunt, soluta officiis reiciendis tenetur. Sit molestiae, ipsum dolorum saepe hic delectus ea. Exercitationem commodi sint libero molestiae voluptates!</span>
+    <span>Maxime autem suscipit unde, minus. Blanditiis alias provident vitae tempora adipisci molestias repellendus ut sapiente necessitatibus nam consectetur in iusto velit, repudiandae sit officiis beatae molestiae maiores officia, excepturi! Doloribus.</span>
+    <span>Cum amet, velit ipsam voluptatem itaque voluptatibus illum adipisci saepe minus, incidunt ipsum voluptas? Ducimus quis commodi dolor doloremque, consequatur itaque, voluptatem adipisci ipsa repudiandae maiores molestias rem neque delectus.</span>
+    <span>Dolores reiciendis eaque amet dicta eos pariatur ab! Quam consequuntur maxime, fuga dignissimos expedita id minima ducimus nihil. Molestias amet neque animi in? Quaerat, sequi assumenda obcaecati minus veritatis velit.</span>
+    <span>Molestiae enim dicta deleniti ullam, maxime impedit debitis omnis necessitatibus sapiente id. Facilis corporis facere, modi rem vel omnis, aspernatur deserunt libero iure sunt aut expedita excepturi adipisci praesentium non.</span>
+    <span>Sequi ad repellat quia consequatur. Est cumque deleniti optio debitis pariatur, sapiente blanditiis beatae, animi minima numquam doloremque! Nemo nostrum ducimus sint, ex in impedit voluptatem nesciunt rerum! Odit, in.</span>
+    <span>Odit exercitationem doloribus atque sit beatae, impedit maxime pariatur obcaecati iusto necessitatibus, repellendus similique voluptatibus amet id quae eaque dignissimos quibusdam saepe hic dolore dolor non sequi. Unde, consectetur, cupiditate?</span>
+    <span>Dolores tempora, ad maiores a, facere aliquid earum, quis nobis aliquam minima error totam fugiat doloribus sunt assumenda deleniti. Ea omnis, similique aspernatur harum, cum quia iste. Velit, necessitatibus quos!</span></p>
+    </main>
+</body>
+<script>
+    var burgerMenu = document.querySelector(".nav-bar");
+    var burger = document.querySelector(".burger");
+    var body = document.querySelector(".body");
+    var height = window.screen.height;
+    var width = window.screen.width;
+    var nav = $("#nav");
+    if (width < 700) {
+        nav.css({
+            height: height
+        });
+    }
+    
+    $("#click").click(function() {
+        console.log("click");
+        burgerMenu.classList.toggle("active");
+        burger.classList.toggle("active");
+        body.classList.toggle("lock");
+        console.log(height);
+    });
+    
+</script>
+    
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</html>
